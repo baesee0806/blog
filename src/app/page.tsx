@@ -1,4 +1,5 @@
 import { Card, CardTitle, CardContent, CardHeader } from "@/components/ui/card";
+import Image from "next/image";
 
 const dummyPosts = [
   {
@@ -31,7 +32,16 @@ export default async function Home() {
             rel="noopener noreferrer"
             className="block group"
           >
-            <Card className="border border-border shadow-none hover:shadow-md transition-shadow duration-300 bg-card h-full flex flex-col">
+            <Card className="border border-border shadow-none hover:shadow-md transition-shadow duration-300 bg-card h-full flex flex-col al">
+              <div className="rounded-t-md overflow-hidden">
+                <Image
+                  src={"https://dummyimage.com/340x200/000/ffffff"}
+                  alt=""
+                  width={339}
+                  height={199}
+                  className=""
+                />
+              </div>
               <CardHeader className="pb-3">
                 <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
                   {post.title}
